@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{% if name %}
+    <b>{{name}} {{ chenghu}}, 欢迎访问我的博客！</b><br/>
+    <span>今天是{{ now|date:"Y-m-d H:i:s" }}</span><br/>
+    {% for name in names %}
+        欢迎{{ name|capfirst }}.
+    {% endfor %}
+{% else %}
+    <span>请登录！</span><br/>
+{% endif %}
+{% endblock content %}

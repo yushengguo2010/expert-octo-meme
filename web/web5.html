@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标题随意开心就好</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 280px;
+            height: 55px;
+            background-color: cornflowerblue;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 55px;
+            border-radius: 10px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="box1">兄弟们，今天去巡山好不好？</div>
+<div id="box2">大哥，我带上哮天犬先</div>
+<div id="box3">走，巡山咯！给我死开！</div>
+<script>
+    var obox1 = document.getElementById("box1")
+    var obox2 = document.getElementById("box2")
+    var obox3 = document.getElementById("box3")
+    obox1.onmouseover = function () {
+        this.innerHTML = "站住，你是从哪里来的？"
+        obox2.innerHTML = "大哥，这和尚很香啊！"
+        obox3.innerHTML = "我来闻闻，嗯~香！"
+    }
+    obox2.onmouseover = function () {
+        this.innerHTML = "后面猪耳朵是什么妖怪？"
+        obox1.innerHTML = "长的好丑，像肥猪！"
+        obox3.innerHTML = "要不让哮天犬咬两口试试？"
+    }
+    obox3.onmouseover = function () {
+        this.innerHTML = "这毛脸猴子好瘦啊，常年没吃饭啊？"
+        obox1.innerHTML = "二弟，你猜猜他多少斤"
+        obox2.innerHTML = "顶多50斤~~"
+    }
+    obox2.onmouseout = function () {
+        this.innerHTML = "哎，和尚，你别哭啊！"
+        obox1.innerHTML = "兄弟们，给我上！"
+        obox3.innerHTML = "大哥，快跑，猴子好厉害！"
+
+    }
+</script>
+</body>
+</html>
